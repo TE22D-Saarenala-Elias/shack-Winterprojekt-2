@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "g6RMZWzwNSdeSLCMwacHEdG60FEJupw88SWDX9VwRGtFaZsxiQHa/klmuj3nf301rNSqF51PtkiYcDDIsuf2gQ==",
+  "success": true,
+  "projectFilePath": "c:\\Users\\elias.saarenala\\programmering med Micke\\shack Winterprojekt 2\\shack Winterprojekt 2\\shack Winterprojekt 2.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\elias.saarenala\\.nuget\\packages\\raylib-cs\\6.0.0\\raylib-cs.6.0.0.nupkg.sha512",
+    "C:\\Users\\elias.saarenala\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
