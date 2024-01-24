@@ -6,14 +6,19 @@ using System.Numerics;
 Raylib.InitWindow(1000, 800, "Hello");
 Raylib.SetTargetFPS(60);
 
-Vkung Vkung= new Vkung();                           // V står för vita pjäser. t.ex Vkung står för vit kung.
-Vdrottning Vdrottning = new Vdrottning();
+
+
+
+Vkung Vkung= new Vkung();          // V står för vita pjäser. t.ex Vkung står för vit kung.
+Vdrottning Vdrottning = new Vdrottning(); 
 Vtorn[] Vts;
 Vhäst[] Vhs;
 Vknäkt[] Vkns;
 Vbonde[] Vbs;
 
-Skung Skung = new Skung();                          // S står för svarta pjäser. t.ex Skung står för svart kung.
+
+ 
+Skung Skung = new Skung();                       // S står för svarta pjäser. t.ex Skung står för svart kung.
 Sdrottning Sdrottning = new Sdrottning();
 Storn[] Sts;
 Shäst[] Shs;
@@ -21,8 +26,9 @@ Sknäkt[] Skns;
 Sbonde[] Sbs;
 
 
-Vkns = new Vknäkt[2];
- Vhs = new Vhäst[2];
+Vkns = new Vknäkt[2]; 
+ Vhs = new Vhäst[2];  
+  
  Vts = new Vtorn[2];
  Vbs = new Vbonde[8];
 
@@ -40,7 +46,10 @@ Shs[1] = new Shäst();
 
 Sts[0] = new Storn();
 Sts[1] = new Storn();
-
+for (int i = 0; i < 8; i++)
+{
+    //Sbs[i] = new Sbonde();
+}
 Sbs[0] = new Sbonde();
 Sbs[1] = new Sbonde();
 Sbs[2] = new Sbonde();
@@ -79,24 +88,11 @@ Vbs[7] = new Vbonde();
  while (!Raylib.WindowShouldClose())
 {
 
-  
-// imgskn= Raylib.LoadImage ("C:/Users/elias.saarenala/Desktop/Schack_the_game/image/svart_knäkt.png");
-// imgsh = Raylib.LoadImage ("C:/Users/elias.saarenala/Desktop/Schack_the_game/image/svart_häst.png");
-// imgst = Raylib.LoadImage ("C:/Users/elias.saarenala/Desktop/Schack_the_game/image/svart_torn.png");
-// imgsb = Raylib.LoadImage ("C:/Users/elias.saarenala/Desktop/Schack_the_game/image/svart_bonde.png");
-
-// imgvku= Raylib.LoadImage ("C:/Users/elias.saarenala/Desktop/Schack_the_game/image/vit_kung.png");
-// imgvd = Raylib.LoadImage ("C:/Users/elias.saarenala/Desktop/Schack_the_game/image/vit_drottning.png");
-// imgvkn= Raylib.LoadImage ("C:/Users/elias.saarenala/Desktop/Schack_the_game/image/vit_knäkt.png");
-// imgvh = Raylib.LoadImage ("C:/Users/elias.saarenala/Desktop/Schack_the_game/image/vit_häst.png");
-// imgvt = Raylib.LoadImage ("C:/Users/elias.saarenala/Desktop/Schack_the_game/image/vit_torn.png");
-// imgvb = Raylib.LoadImage ("C:/Users/elias.saarenala/Desktop/Schack_the_game/image/vit_bonde.png");
-
-
 
 //-------------------------------------------------------------------------------------------------------------------
 //                              RENDERING
 //---------------------------------------------------------------------------------------------------------------------
+
 
 int rigtSide1 = 600;
 int rigtSide2 = 700;
@@ -120,15 +116,15 @@ for (int x = 0; x < 901; x =x+200){     //--------------------------------------
 }
                                     //--------------------------------------
      int l = 0;
-      for (int z = 100; z < 901; z =z+200){
+      for (int z = 100; z < 901; z =z+200){     //funktionen som skappar gröna rutor
     Raylib.DrawRectangle(z,l,100,100,Color.Green);       //z = x-kordinaten för gröna fyrkanten
   if (l >= 800) {
     z = 901;                                   // l = y-kordinaten för gröna fyrkanten
   }
-  if (z == rigtSide1+100) {   
+  if (z == rigtSide1+100) {
      z = -200;                           
      l += 100;
-      }                                         //funktionen som skappar gröna rutor
+      }                                  
   if (z == rigtSide2+100) {
      z = -100;                          
      l += 100;
@@ -137,64 +133,101 @@ for (int x = 0; x < 901; x =x+200){     //--------------------------------------
       Raylib.DrawRectangle(800,0,1000,800,Color.White);     // Sidobrädet för tagna pjäser
                                    //--------------------------------------------
       
-      if ((Raylib.GetMouseX() < Vhs[0].x0 + 50 && Raylib.GetMouseX() > Vhs[0].x0-25 ) && (Raylib.GetMouseY() < Vhs[0].y0 + 75 && Raylib.GetMouseY() > Vhs[0].y0 - 25 )){
+    
+  
+ 
+ 
+ Skung.display();
+ Sdrottning.display();
+  
+  Skns[0].display0();
+  Skns[1].display1();
+  
+  Shs[0].display0();
+  Shs[1].display1();
+  
+  Sts[0].display0();
+  Sts[1].display1();
+  
+  Sbs[0].display0();
+  Sbs[1].display1();
+  Sbs[2].display2();
+  Sbs[3].display3();
+  Sbs[4].display4();
+  Sbs[5].display5();
+  Sbs[6].display6();
+  Sbs[7].display7();
+  
+  
+  
+  Vkung.display();
+  Vdrottning.display();
+  
+   Vkns[0].display0();
+   Vkns[1].display1();
+  
+   Vhs[0].display0();
+   Vhs[1].display1();
+  
+  Vts[0].display0();
+   Vts[1].display1();
+  
+  Vbs[0].display0();
+  Vbs[1].display1();
+  Vbs[2].display2();
+  Vbs[3].display3();
+  Vbs[4].display4();
+  Vbs[5].display5();
+  Vbs[6].display6();
+  Vbs[7].display7();
+bool placerad=true;
+if ((Raylib.GetMouseX() < Vkung.x + 38 && Raylib.GetMouseX() > Vkung.x ) && (Raylib.GetMouseY() < Vkung.y + 78 && Raylib.GetMouseY() > Vkung.y )&&placerad){
         
     if (Raylib.IsMouseButtonDown(MouseButton.Left)){
-      Vhs[0].x0 = Raylib.GetMouseX();
-       Vhs[0].y0 = Raylib.GetMouseY();
+      Vkung.x = Raylib.GetMouseX() -19;
+       Vkung.y = Raylib.GetMouseY() - 30;
+       Vkung.display();
+       placerad=false;
     }
+    
+if ((Skung.x < Vkung.x + 50 && Skung.x > Vkung.x-25 ) && (Skung.y < Vkung.y + 75 && Skung.y > Vkung.y - 25 )&& placerad)        // kollar så att vita hästens hitbox koliderar med svarta kungens hitbox, samt att 
+    {                                                                //pjäsen är placerad innan kungen blir tagen och skickas till sidobrädet 
+        Skung.x= 825;
+        Skung.y= 20;
+         // bool dead;
+    // if (dead){
+    //     gameover
+    //     vitt parti vann
+    // }
+    }
+
       }
+
+
+   if ((Raylib.GetMouseX() < Vhs[0].x0 + 50 && Raylib.GetMouseX() > Vhs[0].x0-25 ) && (Raylib.GetMouseY() < Vhs[0].y0 + 75 && Raylib.GetMouseY() > Vhs[0].y0 )&&(placerad)){
+        
+    if (Raylib.IsMouseButtonDown(MouseButton.Left)){
+      Vhs[0].x0 = Raylib.GetMouseX() -19;
+       Vhs[0].y0 = Raylib.GetMouseY() - 30;
+       Vhs[0].display0();
+       placerad=false;
+    }           
+    
+if ((Skung.x < Vhs[0].x0+50 && Skung.x > Vhs[0].x0-25) &&
+    (Skung.y < Vhs[0].y0+75 && Skung.y > Vhs[0].y0-25)&& placerad)// kollar så att vita hästens hitbox koliderar med svarta kungens hitbox, samt 
+    {                                                             // att pjäsen är placerad innan kungen blir tagen och skickas till sidobrädet 
+        Skung.x= 825;
+        Skung.y= 20;
+         // bool dead;
+    // if (dead){
+    //     gameover
+    //     vitt parti vann
+    // }
+    }
+
+      }
+
   
- 
- 
-   Skung.display(125,20);
- // Sdrottning.display(450,50);
-  
-//   Skns[0].display(250,50);
-//   Skns[1].display(550,50);
-  
-//   Shs[0].display(150,50);
-//   Shs[1].display(650,50);
-  
-//   Sts[0].display(50,50);
-//   Sts[1].display(750,50);
-  
-//   Sbs[0].display0();
-//   Sbs[1].display1();
-//   Sbs[2].display2();
-//   Sbs[3].display3();
-//   Sbs[4].display4();
-//   Sbs[5].display5();
-//   Sbs[6].display6();
-//   Sbs[7].display7();
-  
-  
-  
-  Vkung.display(325,720);
-   //Vdrottning.display(425,720);
-  
-   Vkns[0].Display();
-   Vkns[1].Display();
-  
-   Vhs[0].display1();
-//   Vhs[1].display2();
-  
-//   Vts[0].display(50,750);
-//   Vts[1].display(750,750);
-  
-//   Vbs[0].display0();
-//   Vbs[1].display1();
-//   Vbs[2].display2();
-//   Vbs[3].display3();
-//   Vbs[4].display4();
-//   Vbs[5].display5();
-//   Vbs[6].display6();
-//   Vbs[7].display7();
-  
-  // if (Raylib.CheckCollisionRecs(skuRec, Sbs[0]))
-//     {
-//       coins++;
-//     }
 //   //Ifall Vhs[0](vit häst 1) anfaller en Sbs(svart bonde) så ska svarta bonden hamna brevid schackbrädet
    
 //      if((Sbs[0].x0 == Vhs[0].x0) && (Sbs[0].y0 == Vhs[0].y0) ){
@@ -223,7 +256,63 @@ for (int x = 0; x < 901; x =x+200){     //--------------------------------------
 //       }
 //     }
 //   }
-  
+
+bool placerad1=true;
+int pjäsX = Raylib.GetMouseX(); int pjäsY = Raylib.GetMouseY();
+for (int alla_pjäser = 0; alla_pjäser <= 12; alla_pjäser++)
+{
+    
+    for (int q = 0; q < 1; q++)
+    {
+         if ((Raylib.GetMouseX() < Vhs[q].x0 + 50 && Raylib.GetMouseX() > Vhs[q].x0-25 ) && (Raylib.GetMouseY() < Vhs[q].y0 + 75 && Raylib.GetMouseY() > Vhs[0].y0 - 25 )&&(placerad)){
+        placerad1=true;
+    if (Raylib.IsMouseButtonDown(MouseButton.Left)){
+      Vhs[q].x0 = Raylib.GetMouseX() -19;
+       Vhs[q].y0 = Raylib.GetMouseY() - 30;
+       placerad1=false;
+    
+    
+if ((Skung.x < Vhs[q].x0+50 && Skung.x > Vhs[q].x0-25) &&
+    (Skung.y < Vhs[0].y0+75 && Skung.y > Vhs[0].y0-25)&& placerad1)        // kollar så att vita hästens hitbox koliderar med svarta kungens hitbox, samt att 
+    {                                                                //pjäsen är placerad innan kungen blir tagen och skickas till sidobrädet 
+        Skung.x= 825;
+        Skung.y= 20;
+         // bool dead;
+    // if (dead){
+    //     gameover
+    //     vitt parti vann
+    // }
+    }
+    }
+      }
+    }
+}
+
+
+
+// if ((Raylib.GetMouseX() < Vhs[0].x0 + 50 && Raylib.GetMouseX() > Vhs[0].x0-25 ) && (Raylib.GetMouseY() < Vhs[0].y0 + 75 && Raylib.GetMouseY() > Vhs[0].y0 - 25 )){
+        
+//     if (Raylib.IsMouseButtonDown(MouseButton.Left)){
+//       Vhs[0].x0 = Raylib.GetMouseX() -19;
+//        Vhs[0].y0 = Raylib.GetMouseY() - 30;
+//        placerad=false;
+//     }
+    
+// if (Raylib.CheckCollisionRecs(VhRec, VhRec)&& placerad)        // kollar så att vita hästens hitbox koliderar med svarta kungens hitbox, samt att 
+//     {                                                                //pjäsen är placerad innan kungen blir tagen och skickas till sidobrädet 
+//         Skung.x= 825;
+//         Skung.y= 20;
+//          // bool dead;
+//     // if (dead){
+//     //     gameover
+//     //     vitt parti vann
+//     // }
+//     }
+
+    //   }
+
+   
+
 //    if (Vhs[1].y1 == -50) {
 //         Vhs[1].y1 = 150;                              
 //         Vhs[1].x1 = 350;                             
@@ -240,6 +329,7 @@ for (int x = 0; x < 901; x =x+200){     //--------------------------------------
 //   }
 //   }
 //   }
+
 Raylib.EndDrawing();
 
 }

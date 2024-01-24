@@ -1,15 +1,14 @@
 using Raylib_cs;
 // public class vp{
-class Vkung
+ class Vkung
 {
-    int x;
-    int y;
-    public void display(int tempX, int tempY)
+   public int x=325;
+   public int y=720;
+    Texture2D imgVku = Raylib.LoadTexture("C:/Users/elias.saarenala/programmering med Micke/shack Winterprojekt 2/shack Winterprojekt 2/vit_kung.png");
+
+    public void display()
     {
-        x = tempX;
-        y = tempY;
-        Texture2D imgVku = Raylib.LoadTexture("C:/Users/elias.saarenala/programmering med Micke/shack Winterprojekt 2/shack Winterprojekt 2/vit_kung.png");
-        Raylib.DrawTexture(imgVku, (int)x, (int)y, Color.White);
+                Raylib.DrawTexture(imgVku, x, y, Color.White);
     }
     // bool dead;
     // if (dead){
@@ -21,276 +20,210 @@ class Vkung
 
 class Vdrottning
 {
-int x;
-int y;
+ public int x=425;
+public int y=720;
+ Texture2D imgVd = Raylib.LoadTexture("C:/Users/elias.saarenala/programmering med Micke/shack Winterprojekt 2/shack Winterprojekt 2/vit_drottning.png");
+
     public void display()
     {
-        Texture2D imgVd = Raylib.LoadTexture("C:/Users/elias.saarenala/programmering med Micke/shack Winterprojekt 2/shack Winterprojekt 2/vit_drottning.png");
-        Raylib.DrawTexture(imgVd, x, y, Color.White);
+               Raylib.DrawTexture(imgVd, x, y, Color.White);
     }
 }
+
+class Vtorn
+{
+   public int x0=25;
+   public int y0=720;
+    Texture2D imgVt = Raylib.LoadTexture("C:/Users/elias.saarenala/programmering med Micke/shack Winterprojekt 2/shack Winterprojekt 2/vit_torn.png");
+
+    public void display0()
+    {
+        Raylib.DrawTexture(imgVt, x0, y0, Color.White);
+
+    }
+    int x1=725;
+    int y1=720;
+    
+   public void display1()
+    {
+        Raylib.DrawTexture(imgVt, x1, y1, Color.White);
+
+    }
+}
+
 class Vknäkt
 {
     public int x0=225;
     public int y0=720;
-
-
-    public void Display()
-    {    //x0 är x-kordinaten för knäkt 1 och y0 är y-kordinaten för knäkt 1
-        // int x0 = 225;
-        // int y0 = 720;
-
-        Texture2D imgVkn = Raylib.LoadTexture("C:/Users/elias.saarenala/programmering med Micke/shack Winterprojekt 2/shack Winterprojekt 2/vit_knäkt.png");
-        Raylib.DrawTexture(imgVkn, x0, y0, Color.White);
+ Texture2D imgVkn = Raylib.LoadTexture("C:/Users/elias.saarenala/programmering med Micke/shack Winterprojekt 2/shack Winterprojekt 2/vit_knäkt.png");
+    public void display0()
+    {    
+               Raylib.DrawTexture(imgVkn, x0, y0, Color.White); //x0 är x-kordinaten för knäkt 1 och y0 är y-kordinaten för knäkt 1
     }
+
     public int x1 = 525; 
-    public int y1 = 720;
+    public int y1 = 720; 
     public void display1()
-    {      //x1 är x-kordinaten för knäkt 2 och y1 är y-kordinaten för knäkt 2
-        Texture2D imgVkn = Raylib.LoadTexture("C:/Users/elias.saarenala/programmering med Micke/shack Winterprojekt 2/shack Winterprojekt 2/vit_knäkt.png");
-        Raylib.DrawTexture(imgVkn, x1, y1, Color.White);
+    {    
+               Raylib.DrawTexture(imgVkn, x1, y1, Color.White); //x1 är x-kordinaten för knäkt 2 och y1 är y-kordinaten för knäkt 2
     }
 }
 
- class Vhäst
+ public class Vhäst
 {
-     public int x0 = 150;
-     public int y0 = 725;  
-
-   
-   public void display1()
+     public int x0 = 125;
+     public int y0 = 720;  
+ Texture2D imgVh = Raylib.LoadTexture("C:/Users/elias.saarenala/programmering med Micke/shack Winterprojekt 2/shack Winterprojekt 2/vit_häst.png");
+      
+   public void display0() //public void display0(int x, int y)
     {
-        Texture2D imgVh = Raylib.LoadTexture("C:/Users/elias.saarenala/programmering med Micke/shack Winterprojekt 2/shack Winterprojekt 2/vit_häst.png");
+        
         Raylib.DrawTexture(imgVh, x0, y0, Color.White);
         
     }
-     public int x1 = 650;
-    public int y1 = 750;
-    void display2()
+     public int x1 = 625;
+    public int y1 = 720;
+    public void display1()
     {
-        Texture2D imgVh = Raylib.LoadTexture("C:/Users/elias.saarenala/programmering med Micke/shack Winterprojekt 2/shack Winterprojekt 2/vit_häst.png");
         Raylib.DrawTexture(imgVh, x1, y1, Color.White);
         
     }
 
 }
 
-class Vtorn
-{
-    float x;
-    float y;
-    void display(float tempX, float tempY)
-    {
-        x = tempX;
-        y = tempY;
-
-        // imageMode(CENTER);
-        // image(imgvt,x,y);
-    }
-}
-
 class Vbonde
 {
-    float x0 = 50; float y0 = 650;
-    float x1 = 150; float y1 = 650;
-    float x2 = 250; float y2 = 650;
-    float x3 = 350; float y3 = 650;
-    float x4 = 450; float y4 = 650;
-    float x5 = 550; float y5 = 650;
-    float x6 = 650; float y6 = 650;
-    float x7 = 750; float y7 = 650;
+    int x0 = 25; int y0 = 620;
+    int x1 = 125; int y1 = 620;
+    int x2 = 225; int y2 = 620;
+    int x3 = 325; int y3 = 620;
+    int x4 = 425; int y4 = 620;
+    int x5 = 525; int y5 = 620;
+    int x6 = 625; int y6 = 620;
+    int x7 = 725; int y7 = 620;
+Texture2D imgVb = Raylib.LoadTexture("C:/Users/elias.saarenala/programmering med Micke/shack Winterprojekt 2/shack Winterprojekt 2/vit_bonde.png");
+ 
+   public void display0() {Raylib.DrawTexture(imgVb, x0, y0, Color.White); }
 
-    void display0()
-    {
+   public void display1() {Raylib.DrawTexture(imgVb, x1, y1, Color.White); }
 
-        // imageMode(CENTER);
-        // image(imgvb,x0,y0);
-    }
+   public void display2() {Raylib.DrawTexture(imgVb, x2, y2, Color.White); }
 
-    void display1()
-    {
+   public void display3() {Raylib.DrawTexture(imgVb, x3, y3, Color.White); }
 
-        // imageMode(CENTER);
-        // image(imgvb,x1,y1);
-    }
+   public void display4() {Raylib.DrawTexture(imgVb, x4, y4, Color.White); }
 
-    void display2()
-    {
+   public void display5() {Raylib.DrawTexture(imgVb, x5, y5, Color.White); }
 
-        // imageMode(CENTER);
-        // image(imgvb,x2,y2);
-    }
+   public void display6() {Raylib.DrawTexture(imgVb, x6, y6, Color.White); }
 
-    void display3()
-    {
-
-        // imageMode(CENTER);
-        // image(imgvb,x3,y3);
-    }
-
-    void display4()
-    {
-
-        // imageMode(CENTER);
-        // image(imgvb,x4,y4);
-    }
-
-    void display5()
-    {
-
-        // imageMode(CENTER);
-        // image(imgvb,x5,y5);
-    }
-
-    void display6()
-    {
-
-        // imageMode(CENTER);
-        // image(imgvb,x6,y6);
-    }
-
-    void display7()
-    {
-
-        // imageMode(CENTER);
-        // image(imgvb,x7,y7);
-    }
+   public void display7() {Raylib.DrawTexture(imgVb, x7, y7, Color.White);    }
 }
 // }
 
 // public class sp{
 public class Skung
 {
-    int x;
-    int y;
-    public void display(int tempX, int tempY)
+    public int x=325;
+    public int y=20;
+    Texture2D imgsku = Raylib.LoadTexture("C:/Users/elias.saarenala/programmering med Micke/shack Winterprojekt 2/shack Winterprojekt 2/svart_kung.png");
+       
+    public void display()
     {
-        x = tempX;
-        y = tempY;
-        Texture2D imgsku = Raylib.LoadTexture("C:/Users/elias.saarenala/programmering med Micke/shack Winterprojekt 2/shack Winterprojekt 2/svart_kung.png");
-        Rectangle skuRec = new Rectangle(x, y, imgsku.Width, imgsku.Height);
-        Raylib.DrawTexture(imgsku, (int)x, (int)y, Color.White);
+         
+        Raylib.DrawTexture(imgsku, x, y, Color.White);
     }
 }
 
 class Sdrottning
 {
-    float x;
-    float y;
-    void display(float tempX, float tempY)
+    int x=425;
+    int y=20;
+    Texture2D imgsd = Raylib.LoadTexture("C:/Users/elias.saarenala/programmering med Micke/shack Winterprojekt 2/shack Winterprojekt 2/svart_drottning.png");
+    public void display()
     {
-        x = tempX;
-        y = tempY;
-        // imageMode(CENTER);
-        // image(imgsd,x,y);
+        Raylib.DrawTexture(imgsd, x, y, Color.White);
     }
 }
 
 class Sknäkt
 {
-    float x;
-    float y;
-    void display(float tempX, float tempY)
+    int x0=225;
+    int y0=20;
+    Texture2D imgsku = Raylib.LoadTexture("C:/Users/elias.saarenala/programmering med Micke/shack Winterprojekt 2/shack Winterprojekt 2/svart_knäkt.png");
+    public void display0()
     {
-        x = tempX;
-        y = tempY;
-        // imageMode(CENTER);
-        // image(imgskn,x,y);
+        Raylib.DrawTexture(imgsku, x0, y0, Color.White);
+    }
+    int x1=525;
+    int y1=20;
+    public void display1()
+    {
+        Raylib.DrawTexture(imgsku, x1, y1, Color.White);
     }
 }
 
 class Shäst
 {
-    float x;
-    float y;
-
-    void display(float tempX, float tempY)
+   int x0=125;
+    int y0=20;
+    Texture2D imgsh = Raylib.LoadTexture("C:/Users/elias.saarenala/programmering med Micke/shack Winterprojekt 2/shack Winterprojekt 2/svart_häst.png");
+    public void display0()
     {
-        x = tempX;
-        y = tempY;
-        // imageMode(CENTER);
-        // image(imgsh,x,y);
+        Raylib.DrawTexture(imgsh, x0, y0, Color.White);
+    }
+    int x1=625;
+    int y1=20;
+
+    public void display1()
+    {
+        Raylib.DrawTexture(imgsh, x1, y1, Color.White);
     }
 }
 
 class Storn
 {
-    float x;
-    float y;
-    void display(float tempX, float tempY)
+    int x0=25;
+    int y0=20;
+    Texture2D imgst = Raylib.LoadTexture("C:/Users/elias.saarenala/programmering med Micke/shack Winterprojekt 2/shack Winterprojekt 2/svart_torn.png");
+    public void display0()
     {
-        x = tempX;
-        y = tempY;
-        // imageMode(CENTER);
-        // image(imgst,x,y);
+        Raylib.DrawTexture(imgst, x0, y0, Color.White);
+    }
+    int x1=725;
+    int y1=20;
+    public void display1()
+    {
+        Raylib.DrawTexture(imgst, x1, y1, Color.White);
     }
 }
 
 class Sbonde
 {
-    float x0 = 50; float y0 = 150;
-    float x1 = 150; float y1 = 150;
-    float x2 = 250; float y2 = 150;
-    float x3 = 350; float y3 = 150;
-    float x4 = 450; float y4 = 150;
-    float x5 = 550; float y5 = 150;
-    float x6 = 650; float y6 = 150;
-    float x7 = 750; float y7 = 150;
-    public void display0()
-    {
+    int x0 = 25; int y0 = 120;
+    int x1 = 125; int y1 = 120;
+    int x2 = 225; int y2 = 120;
+    int x3 = 325; int y3 = 120;
+    int x4 = 425; int y4 = 120;
+    int x5 = 525; int y5 = 120;
+    int x6 = 625; int y6 = 120;
+    int x7 = 725; int y7 = 120;
+    Texture2D imgsb = Raylib.LoadTexture("C:/Users/elias.saarenala/programmering med Micke/shack Winterprojekt 2/shack Winterprojekt 2/svart_bonde.png");
+    public void display0() { Raylib.DrawTexture(imgsb, x0, y0, Color.White); }
 
-        // imageMode(CENTER);
-        // image(imgsb,x0,y0);
-    }
+    public void display1() { Raylib.DrawTexture(imgsb, x1, y1, Color.White); }
 
-    public void display1()
-    {
+    public void display2() { Raylib.DrawTexture(imgsb, x2, y2, Color.White); }
 
-        // imageMode(CENTER);
-        // image(imgsb,x1,y1);
-    }
+    public void display3() { Raylib.DrawTexture(imgsb, x3, y3, Color.White); }
 
-    public void display2()
-    {
+    public void display4() { Raylib.DrawTexture(imgsb, x4, y4, Color.White); }
 
-        // imageMode(CENTER);
-        // image(imgsb,x2,y2);
-    }
+    public void display5() { Raylib.DrawTexture(imgsb, x5, y5, Color.White); }
 
-    public void display3()
-    {
+    public void display6() { Raylib.DrawTexture(imgsb, x6, y6, Color.White); }
 
-        // imageMode(CENTER);
-        // image(imgsb,x3,y3);
-    }
-
-    public void display4()
-    {
-
-        // imageMode(CENTER);
-        // image(imgsb,x4,y4);
-    }
-
-    public void display5()
-    {
-
-        // imageMode(CENTER);
-        // image(imgsb,x5,y5);
-    }
-
-    public void display6()
-    {
-
-        // imageMode(CENTER);
-        // image(imgsb,x6,y6);
-    }
-
-    public void display7()
-    {
-
-        // imageMode(CENTER);
-        // image(imgsb,x7,y7);
-    }
+    public void display7() { Raylib.DrawTexture(imgsb, x7, y7, Color.White); }
 
 }
 // }
