@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\elias.saarenala\\programmering med Micke\\shack Winterprojekt 2\\shack Winterprojekt 2\\shack Winterprojekt 2.csproj": {}
+    "C:\\Users\\elias.saarenala\\programmering med Micke\\shack Winterprojekt 2\\shack Winterprojekt 2\\shack Winterprojekt 2.csproj": {}
   },
   "projects": {
-    "c:\\Users\\elias.saarenala\\programmering med Micke\\shack Winterprojekt 2\\shack Winterprojekt 2\\shack Winterprojekt 2.csproj": {
+    "C:\\Users\\elias.saarenala\\programmering med Micke\\shack Winterprojekt 2\\shack Winterprojekt 2\\shack Winterprojekt 2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\elias.saarenala\\programmering med Micke\\shack Winterprojekt 2\\shack Winterprojekt 2\\shack Winterprojekt 2.csproj",
+        "projectUniqueName": "C:\\Users\\elias.saarenala\\programmering med Micke\\shack Winterprojekt 2\\shack Winterprojekt 2\\shack Winterprojekt 2.csproj",
         "projectName": "shack Winterprojekt 2",
-        "projectPath": "c:\\Users\\elias.saarenala\\programmering med Micke\\shack Winterprojekt 2\\shack Winterprojekt 2\\shack Winterprojekt 2.csproj",
+        "projectPath": "C:\\Users\\elias.saarenala\\programmering med Micke\\shack Winterprojekt 2\\shack Winterprojekt 2\\shack Winterprojekt 2.csproj",
         "packagesPath": "C:\\Users\\elias.saarenala\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\elias.saarenala\\programmering med Micke\\shack Winterprojekt 2\\shack Winterprojekt 2\\obj\\",
+        "outputPath": "C:\\Users\\elias.saarenala\\programmering med Micke\\shack Winterprojekt 2\\shack Winterprojekt 2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -9,79 +9,61 @@ Raylib.SetTargetFPS(60);
 
 
 
-Vkung Vkung= new Vkung();          // V står för vita pjäser. t.ex Vkung står för vit kung.
-Vdrottning Vdrottning = new Vdrottning(); 
 Vtorn[] Vts;
 Vhäst[] Vhs;
 Vknäkt[] Vkns;
 Vbonde[] Vbs;
 
-
- 
-Skung Skung = new Skung();                       // S står för svarta pjäser. t.ex Skung står för svart kung.
-Sdrottning Sdrottning = new Sdrottning();
 Storn[] Sts;
 Shäst[] Shs;
 Sknäkt[] Skns;
 Sbonde[] Sbs;
 
-
+ Vts = new Vtorn[2];
 Vkns = new Vknäkt[2]; 
  Vhs = new Vhäst[2];  
-  
- Vts = new Vtorn[2];
  Vbs = new Vbonde[8];
 
+ Sts = new Storn[2];
  Skns = new Sknäkt[2];
  Shs = new Shäst[2];
- Sts = new Storn[2];
  Sbs = new Sbonde[8];
 
+Skung Skung = new Skung(){x=325 , y=20 };                       // S står för svarta pjäser. t.ex Skung står för svart kung.
+Sdrottning Sdrottning = new Sdrottning(){x=425 , y=20};
+Sts[0] = new Storn() {x=25 , y=20};
+Sts[1] = new Storn() {x=725 , y=20};
 
-Skns[0] = new Sknäkt();
-Skns[1] = new Sknäkt();
+Shs[0] = new Shäst() {x=125 , y=20};
+Shs[1] = new Shäst() {x=625 , y=20};
 
-Shs[0] = new Shäst();
-Shs[1] = new Shäst();
+Skns[0] = new Sknäkt() {x=225 , y=20};
+Skns[1] = new Sknäkt() {x=525 , y=20};
 
-Sts[0] = new Storn();
-Sts[1] = new Storn();
-for (int i = 0; i < 8; i++)
-{
-    //Sbs[i] = new Sbonde();
-}
-Sbs[0] = new Sbonde();
-Sbs[1] = new Sbonde();
-Sbs[2] = new Sbonde();
-Sbs[3] = new Sbonde();
-Sbs[4] = new Sbonde();
-Sbs[5] = new Sbonde();
-Sbs[6] = new Sbonde();
-Sbs[7] = new Sbonde();
+int BondeX=25;
+for (int r = 0; r < 8; r++){
+     Sbs[r] = new Sbonde(){x=BondeX , y=120}; 
+     BondeX+=100;}
+
+Vkung Vkung= new Vkung(){ x=325 , y=720 };          // V står för vita pjäser. t.ex Vkung står för vit kung.
+Vdrottning Vdrottning = new Vdrottning(){x=425 , y=720}; 
+
+Vkns[0] = new Vknäkt() {x=225 , y=720};             //Vkns = (V)Vit (kn)Knäkt (s)flera/array av
+Vkns[1] = new Vknäkt() {x=520 , y=720};
+
+Vhs[0] = new Vhäst() {x=125 , y=720};
+Vhs[1] = new Vhäst() {x=625 , y=720};
+
+Vts[0] = new Vtorn() {x= 25 , y=720};
+Vts[1] = new Vtorn() {x=725 , y=720};
 
 
-Vkns[0] = new Vknäkt();
-Vkns[1] = new Vknäkt();
 
-Vhs[0] = new Vhäst();
-Vhs[1] = new Vhäst();
 
-Vts[0] = new Vtorn();
-Vts[1] = new Vtorn();
-
-Vbs[0] = new Vbonde(); 
-Vbs[1] = new Vbonde();
-Vbs[2] = new Vbonde();
-Vbs[3] = new Vbonde();
-Vbs[4] = new Vbonde();
-Vbs[5] = new Vbonde();
-Vbs[6] = new Vbonde();
-Vbs[7] = new Vbonde();
-// for (int r = 0; r < 8; r++)
-// {
-//     Vbs[r] = new Vbonde(); 
-    
-// }
+BondeX=25;
+for (int r = 0; r < 8; r++){
+     Vbs[r] = new Vbonde(){x=BondeX , y=620}; 
+     BondeX+=100;}
 
 //-----------------------------------------------------------------------------------------------------------
 
@@ -140,46 +122,47 @@ for (int x = 0; x < 901; x =x+200){     //--------------------------------------
  Skung.display();
  Sdrottning.display();
   
-  Skns[0].display0();
-  Skns[1].display1();
+ Skns[0].display();
+ Skns[1].display();
+
+  Shs[0].display();
+  Shs[1].display(); 
   
-  Shs[0].display0();
-  Shs[1].display1();
+  Sts[0].display();
+  Sts[1].display();
+ 
   
-  Sts[0].display0();
-  Sts[1].display1();
-  
-  Sbs[0].display0();
-  Sbs[1].display1();
-  Sbs[2].display2();
-  Sbs[3].display3();
-  Sbs[4].display4();
-  Sbs[5].display5();
-  Sbs[6].display6();
-  Sbs[7].display7();
+  Sbs[0].display();
+  Sbs[1].display();
+  Sbs[2].display();
+  Sbs[3].display();
+  Sbs[4].display();
+  Sbs[5].display();
+  Sbs[6].display();
+  Sbs[7].display();
   
   
   
   Vkung.display();
   Vdrottning.display();
   
-   Vkns[0].display0();
-   Vkns[1].display1();
+   Vkns[0].display();
+   Vkns[1].display();
   
-   Vhs[0].display0();
-   Vhs[1].display1();
+   Vhs[0].display();
+   Vhs[1].display();
   
-  Vts[0].display0();
-   Vts[1].display1();
+  Vts[0].display();
+  Vts[1].display();
   
-  Vbs[0].display0();
-  Vbs[1].display1();
-  Vbs[2].display2();
-  Vbs[3].display3();
-  Vbs[4].display4();
-  Vbs[5].display5();
-  Vbs[6].display6();
-  Vbs[7].display7();
+  Vbs[0].display();
+  Vbs[1].display();
+  Vbs[2].display();
+  Vbs[3].display();
+  Vbs[4].display();
+  Vbs[5].display();
+  Vbs[6].display();
+  Vbs[7].display();
 bool placerad=true;
 if ((Raylib.GetMouseX() < Vkung.x + 38 && Raylib.GetMouseX() > Vkung.x ) && (Raylib.GetMouseY() < Vkung.y + 78 && Raylib.GetMouseY() > Vkung.y )&&placerad){
         
@@ -190,7 +173,7 @@ if ((Raylib.GetMouseX() < Vkung.x + 38 && Raylib.GetMouseX() > Vkung.x ) && (Ray
        placerad=false;
     }
     
-if ((Skung.x < Vkung.x + 50 && Skung.x > Vkung.x-25 ) && (Skung.y < Vkung.y + 75 && Skung.y > Vkung.y - 25 )&& placerad)        // kollar så att vita hästens hitbox koliderar med svarta kungens hitbox, samt att 
+if ((Skung.x < Vkung.x + 25 && Skung.x+25 > Vkung.x ) && (Skung.y+30 < Vkung.y + 75 && Skung.y > Vkung.y - 25 )&& placerad)        // kollar så att vita hästens hitbox koliderar med svarta kungens hitbox, samt att 
     {                                                                //pjäsen är placerad innan kungen blir tagen och skickas till sidobrädet 
         Skung.x= 825;
         Skung.y= 20;
@@ -204,17 +187,17 @@ if ((Skung.x < Vkung.x + 50 && Skung.x > Vkung.x-25 ) && (Skung.y < Vkung.y + 75
       }
 
 
-   if ((Raylib.GetMouseX() < Vhs[0].x0 + 50 && Raylib.GetMouseX() > Vhs[0].x0-25 ) && (Raylib.GetMouseY() < Vhs[0].y0 + 75 && Raylib.GetMouseY() > Vhs[0].y0 )&&(placerad)){
+   if ((Raylib.GetMouseX() < Vhs[0].x + 50 && Raylib.GetMouseX() > Vhs[0].x-25 ) && (Raylib.GetMouseY() < Vhs[0].y + 75 && Raylib.GetMouseY() > Vhs[0].y )&&(placerad)){
         
     if (Raylib.IsMouseButtonDown(MouseButton.Left)){
-      Vhs[0].x0 = Raylib.GetMouseX() -19;
-       Vhs[0].y0 = Raylib.GetMouseY() - 30;
-       Vhs[0].display0();
+      Vhs[0].x = Raylib.GetMouseX() -19;
+       Vhs[0].y = Raylib.GetMouseY() - 30;
+       Vhs[0].display();
        placerad=false;
     }           
     
-if ((Skung.x < Vhs[0].x0+50 && Skung.x > Vhs[0].x0-25) &&
-    (Skung.y < Vhs[0].y0+75 && Skung.y > Vhs[0].y0-25)&& placerad)// kollar så att vita hästens hitbox koliderar med svarta kungens hitbox, samt 
+if ((Skung.x < Vhs[0].x+50 && Skung.x > Vhs[0].x-25) &&
+    (Skung.y < Vhs[0].y+75 && Skung.y > Vhs[0].y-25)&& placerad)// kollar så att vita hästens hitbox koliderar med svarta kungens hitbox, samt 
     {                                                             // att pjäsen är placerad innan kungen blir tagen och skickas till sidobrädet 
         Skung.x= 825;
         Skung.y= 20;
@@ -264,16 +247,16 @@ for (int alla_pjäser = 0; alla_pjäser <= 12; alla_pjäser++)
     
     for (int q = 0; q < 1; q++)
     {
-         if ((Raylib.GetMouseX() < Vhs[q].x0 + 50 && Raylib.GetMouseX() > Vhs[q].x0-25 ) && (Raylib.GetMouseY() < Vhs[q].y0 + 75 && Raylib.GetMouseY() > Vhs[0].y0 - 25 )&&(placerad)){
+         if ((Raylib.GetMouseX() < Vhs[q].x + 50 && Raylib.GetMouseX() > Vhs[q].x-25 ) && (Raylib.GetMouseY() < Vhs[q].y + 75 && Raylib.GetMouseY() > Vhs[0].y - 25 )&&(placerad)){
         placerad1=true;
     if (Raylib.IsMouseButtonDown(MouseButton.Left)){
-      Vhs[q].x0 = Raylib.GetMouseX() -19;
-       Vhs[q].y0 = Raylib.GetMouseY() - 30;
+      Vhs[q].x = Raylib.GetMouseX() -19;
+       Vhs[q].y = Raylib.GetMouseY() - 30;
        placerad1=false;
     
     
-if ((Skung.x < Vhs[q].x0+50 && Skung.x > Vhs[q].x0-25) &&
-    (Skung.y < Vhs[0].y0+75 && Skung.y > Vhs[0].y0-25)&& placerad1)        // kollar så att vita hästens hitbox koliderar med svarta kungens hitbox, samt att 
+if ((Skung.x < Vhs[q].x+50 && Skung.x > Vhs[q].x-25) &&
+    (Skung.y < Vhs[0].y+75 && Skung.y > Vhs[0].y-25)&& placerad1)        // kollar så att vita hästens hitbox koliderar med svarta kungens hitbox, samt att 
     {                                                                //pjäsen är placerad innan kungen blir tagen och skickas till sidobrädet 
         Skung.x= 825;
         Skung.y= 20;
